@@ -1,0 +1,337 @@
+/* ── Base ─────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: #0d0d0d;
+  color: #e8e8e8;
+}
+
+/* ── App ──────────────────────────────────────────────────── */
+.app {
+  min-height: 100vh;
+}
+
+/* ── Navbar ───────────────────────────────────────────────── */
+.navbar {
+  background: #111111;
+  border-bottom: 2px solid #c9a84c;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.navbar__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c9a84c;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: #aaaaaa;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.navbar__link:hover {
+  color: #c9a84c;
+  background: rgba(201, 168, 76, 0.1);
+}
+
+.navbar__link.active {
+  color: #c9a84c;
+}
+
+.navbar__link--tickets {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.navbar__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.3rem;
+  border-radius: 999px;
+  background: #c9a84c;
+  color: #0d0d0d;
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.navbar__dropdown {
+  position: relative;
+}
+
+.navbar__dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-top: 2px solid #c9a84c;
+  min-width: 170px;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.navbar__dropdown:hover .navbar__dropdown-menu {
+  display: block;
+}
+
+.navbar__dropdown-item {
+  display: block;
+  text-decoration: none;
+  color: #aaaaaa;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
+.navbar__dropdown-item:hover {
+  background: rgba(201, 168, 76, 0.1);
+  color: #c9a84c;
+}
+
+/* ── Page base ────────────────────────────────────────────── */
+.page {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page__eyebrow {
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 0.75rem;
+}
+
+.page__title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.page__lead {
+  font-size: 1.1rem;
+  color: #aaaaaa;
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+/* ── Hero (Home) ──────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  border-bottom: 1px solid #2a2a2a;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  color: #ffffff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero__title span {
+  color: #c9a84c;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  color: #888888;
+  margin-bottom: 2.5rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.75rem 1.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: #c9a84c;
+  color: #0d0d0d;
+}
+
+.btn--outline {
+  background: transparent;
+  color: #c9a84c;
+  border: 2px solid #c9a84c;
+}
+
+/* ── Movie grid ───────────────────────────────────────────── */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.movie-card {
+  background: #1a1a1a;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+  cursor: pointer;
+}
+
+.movie-card__poster {
+  aspect-ratio: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.movie-card__body {
+  padding: 0.75rem;
+}
+
+.movie-card__title {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.movie-card__meta {
+  font-size: 0.8rem;
+  color: #888888;
+}
+
+.movie-card__rating {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: #c9a84c;
+  color: #0d0d0d;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+}
+
+.movie-card__buy {
+  display: block;
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.4rem 0;
+  background: transparent;
+  border: 1px solid #c9a84c;
+  color: #c9a84c;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.movie-card__buy:hover {
+  background: #c9a84c;
+  color: #0d0d0d;
+}
+
+/* ── Subnav (Movies layout) ───────────────────────────────── */
+.subnav {
+  background: #161616;
+  border-bottom: 1px solid #2a2a2a;
+  padding: 0 2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.subnav__link {
+  text-decoration: none;
+  color: #888888;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 2px solid transparent;
+}
+
+.subnav__link:hover,
+.subnav__link.active {
+  color: #c9a84c;
+  border-bottom-color: #c9a84c;
+}
+
+/* ── Tickets ──────────────────────────────────────────────── */
+.ticket-form {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  max-width: 480px;
+}
+
+.ticket-form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  font-weight: 500;
+}
+
+.ticket-form__input,
+.ticket-form__select {
+  padding: 0.6rem 0.8rem;
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  color: #e8e8e8;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.ticket-form__input:focus,
+.ticket-form__select:focus {
+  outline: none;
+  border-color: #c9a84c;
+}
+
+/* ── Divider ──────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid #2a2a2a;
+  margin: 3rem 0;
+}

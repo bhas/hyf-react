@@ -1,4 +1,5 @@
 import ArticleCard from './ArticleCard.jsx';
+import Heading from './Heading.jsx';
 
 const articles = [
   {
@@ -31,16 +32,9 @@ const articles = [
 ];
 
 export default function Page({ isDark }) {
-  const accent = isDark ? '#e94560' : '#4f46e5';
-
   return (
     <main className="page">
-      <h2
-        className="page__heading"
-        style={{ color: isDark ? '#e0e0e0' : '#333333', borderBottom: `2px solid ${accent}` }}
-      >
-        Latest Articles
-      </h2>
+      <Heading level={2} isDark={isDark}>Latest Articles</Heading>
       <div className="page__grid">
         {articles.map(article => (
           <ArticleCard key={article.id} article={article} isDark={isDark} />

@@ -1,3 +1,5 @@
+import Heading from './Heading.jsx';
+
 export default function ArticleCard({ article, isDark }) {
   const accent = isDark ? '#e94560' : '#4f46e5';
 
@@ -12,9 +14,7 @@ export default function ArticleCard({ article, isDark }) {
       }}
     >
       <div className="card__header">
-        <h3 className="card__title" style={{ color: isDark ? '#ffffff' : '#111111' }}>
-          {article.title}
-        </h3>
+        <Heading level={3} isDark={isDark}>{article.title}</Heading>
         <span className="card__tag" style={{ background: accent }}>{article.tag}</span>
       </div>
       <p className="card__summary">{article.summary}</p>
