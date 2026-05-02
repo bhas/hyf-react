@@ -1,5 +1,48 @@
 
 
+# Class Exercise 3 - UI Library (Material UI)
+
+The app is a fully styled webshop landing page built with plain CSS classes.  
+Your task is to rebuild it using **Material UI (MUI)** components.
+
+## Setup
+
+Install Material UI:
+```bash
+npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
+```
+
+## Your task
+
+Work through each component file and replace the custom HTML + CSS with the equivalent MUI components.  
+Use the [Material UI documentation](https://mui.com/material-ui/) as your reference.
+
+Here are the key mappings to get you started:
+
+| What you have | MUI component to use |
+|---|---|
+| `<nav className="navbar">` | `<AppBar>` + `<Toolbar>` |
+| `<a href="#">` nav links | `<Button>` |
+| `.btn--primary` / `.btn--outline` | `<Button variant="contained">` / `<Button variant="outlined">` |
+| `.product-card` | `<Card>` + `<CardMedia>` + `<CardContent>` + `<CardActions>` |
+| `.product-card__btn` | `<Button>` inside `<CardActions>` |
+| `.features-grid` | `<Grid>` |
+| `.testimonial-card` | `<Card>` + `<CardContent>` |
+| Star rating | `<Rating>` |
+| `<input>` in newsletter | `<TextField>` |
+| `<footer>` | `<Box component="footer">` |
+
+### Tips
+- Wrap your app in `<CssBaseline />` (inside `<App>`) to reset browser styles — you can then delete `index.css`.
+- Use the MUI `sx` prop for one-off overrides instead of custom CSS classes.
+- Use `<Typography variant="h1">`, `variant="body1"` etc. for all text.
+- Use `<Container maxWidth="lg">` to replace `.section` max-width wrappers.
+
+### Bonus
+- Add a MUI `<ThemeProvider>` to change the primary colour from MUI blue to the purple `#6c63ff` used in the original design.
+
+---
+
 # Class Exercise 2 - React Router
 
 ## The problem with manual navigation

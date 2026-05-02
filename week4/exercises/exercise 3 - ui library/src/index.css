@@ -1,0 +1,453 @@
+/* ── Reset & base ─────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f0f2f5;
+  color: #1a1a1a;
+  line-height: 1.6;
+  padding: 32px 16px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Shared section styles ────────────────────────────────── */
+.section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.hero {
+  background-color: #eeeeee;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero__actions {
+  margin-top: 20px;
+}
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid black;
+  background: white;
+  color: black;
+  font-size: 1rem;
+}
+
+.btn--primary {
+  background: blue;
+  color: white;
+  border-color: blue;
+}
+
+/* ── Product grid ─────────────────────────────────────────── */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.product-card {
+  border: 1px solid #cccccc;
+  width: 200px;
+  padding: 10px;
+}
+
+.product-card__image {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.product-card__btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* ── Features ─────────────────────────────────────────────── */
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.feature-card {
+  width: 200px;
+  border: 1px solid #cccccc;
+  padding: 15px;
+}
+
+/* ── Testimonials ─────────────────────────────────────────── */
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.testimonial-card {
+  border: 1px solid #cccccc;
+  padding: 15px;
+  width: 250px;
+}
+
+/* ── Newsletter ───────────────────────────────────────────── */
+.newsletter-section {
+  background-color: #dddddd;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.newsletter-form {
+  margin-top: 15px;
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+.footer {
+  background: #1a1a1a;
+  color: #aaaaaa;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer__logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.footer__logo span {
+  color: #6c63ff;
+}
+
+.footer__copy {
+  font-size: 0.85rem;
+}
+
+.footer__links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.footer__link {
+  color: #aaaaaa;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.footer__link:hover {
+  color: #ffffff;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   EXERCISE STYLES
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Page header ──────────────────────────────────────────── */
+.page-header {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  padding-bottom: 16px;
+  border-bottom: 3px solid #5c6bc0;
+}
+
+.page-header h1 {
+  font-size: 1.6rem;
+  color: #3949ab;
+  margin-bottom: 4px;
+}
+
+.page-header p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ── Exercise card ────────────────────────────────────────── */
+.exercise {
+  background: #ffffff;
+  border: 1px solid #d0d7de;
+  border-top: 4px solid #5c6bc0;
+  border-radius: 4px;
+  padding: 24px;
+  margin: 0 auto 24px;
+  max-width: 720px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+
+.exercise h2 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #1a1a1a;
+}
+
+.exercise > p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.exercise hr {
+  border: none;
+  border-top: 1px dashed #ccc;
+  margin-bottom: 20px;
+}
+
+.exercise code {
+  background: #eef2ff;
+  color: #3949ab;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+/* ── Form fields ──────────────────────────────────────────── */
+.field {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.field input,
+.field textarea,
+.field select {
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #5c6bc0;
+  box-shadow: 0 0 0 2px rgba(92,107,192,0.15);
+}
+
+.exercise button[type='submit'],
+.exercise button:not(.icon-btn) {
+  margin-top: 4px;
+  padding: 9px 20px;
+  background: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.exercise button[type='submit']:hover,
+.exercise button:not(.icon-btn):hover {
+  background: #3949ab;
+}
+
+/* ── Feedback ─────────────────────────────────────────────── */
+.feedback-success {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-left: 4px solid #4caf50;
+  border-radius: 3px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  color: #2e7d32;
+}
+
+/* ── Product filters ──────────────────────────────────────── */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.filters fieldset {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px 14px;
+  min-width: 140px;
+  background: #fafafa;
+}
+
+.filters legend {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #555;
+  padding: 0 4px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.filters select {
+  padding: 5px 8px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  width: 100%;
+}
+
+/* ── Profile card ─────────────────────────────────────────── */
+.profile-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #c5cae9;
+  color: #3949ab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+  border: 2px solid #9fa8da;
+}
+
+.tags {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #eef2ff;
+  color: #3949ab;
+  border: 1px solid #c5cae9;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background: #c5cae9;
+}
+
+/* ── Notification preferences ─────────────────────────────── */
+.pref-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pref-list li + li {
+  border-top: 1px solid #eee;
+}
+
+.pref-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 4px;
+}
+
+.pref-item strong {
+  font-size: 0.95rem;
+}
+
+.pref-item input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #5c6bc0;
+}
+
+/* ── Cart table ───────────────────────────────────────────── */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.cart-table th {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #555;
+}
+
+.cart-table td {
+  border: 1px solid #e0e0e0;
+  padding: 8px 12px;
+}
+
+.cart-table tfoot td {
+  background: #fafafa;
+  border-top: 2px solid #ccc;
+}
+
+.cart-table button {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #bbb;
+  background: white;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  color: #333;
+}
+
+.cart-table button:hover {
+  background: #eef2ff;
+  border-color: #5c6bc0;
+}
