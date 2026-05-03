@@ -31,13 +31,13 @@ const articles = [
   },
 ];
 
-export default function Page({ isDark }) {
+export default function Page() {
   return (
     <main className="page">
-      <Heading level={2} isDark={isDark}>Latest Articles</Heading>
+      <Heading level={2}>Latest Articles</Heading>
       <div className="page__grid">
         {articles.map(article => (
-          <ArticleCard key={article.id} article={article} isDark={isDark} />
+          <ArticleCard key={article.id} article={article} />
         ))}
       </div>
     </main>

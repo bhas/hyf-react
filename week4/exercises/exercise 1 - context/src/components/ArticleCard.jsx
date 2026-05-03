@@ -1,6 +1,9 @@
+import { useContext } from 'react';
 import Heading from './Heading.jsx';
+import { ThemeContext } from '../contexts/ThemeContext.jsx';
 
-export default function ArticleCard({ article, isDark }) {
+export default function ArticleCard({ article }) {
+  const { isDark } = useContext(ThemeContext);
   const accent = isDark ? '#e94560' : '#4f46e5';
 
   return (
@@ -14,7 +17,7 @@ export default function ArticleCard({ article, isDark }) {
       }}
     >
       <div className="card__header">
-        <Heading level={3} isDark={isDark}>{article.title}</Heading>
+        <Heading level={3}>{article.title}</Heading>
         <span className="card__tag" style={{ background: accent }}>{article.tag}</span>
       </div>
       <p className="card__summary">{article.summary}</p>
