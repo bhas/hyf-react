@@ -9,8 +9,8 @@ export default function App() {
     <div className="app">
       <Navbar />
       <Home />
-      {/* <About /> */}
-      {/* <Contact /> */}
+      <About />
+      <Contact />
     </div>
   );
 }

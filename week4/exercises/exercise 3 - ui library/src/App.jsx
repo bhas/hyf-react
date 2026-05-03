@@ -2,7 +2,6 @@ import ContactForm from './components/Hero.jsx';
 import ProductFilters from './components/ProductSection.jsx';
 import ProfileCard from './components/FeaturesSection.jsx';
 import ReviewForm from './components/TestimonialsSection.jsx';
-import NotificationSettings from './components/NewsletterSection.jsx';
 import CartItems from './components/Footer.jsx';
 import './index.css';
 
@@ -17,8 +16,7 @@ export default function App() {
       <ProductFilters />
       <ProfileCard />
       <ReviewForm />
-      <NotificationSettings />
-      <CartItems />
+      {/* Bonus: <CartItems /> */}
     </div>
   );
 }

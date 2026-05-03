@@ -6,7 +6,7 @@ const initialCart = [
   { id: 3, emoji: '🥶', name: 'Wabi Vase',         price: 48.00 },
 ];
 
-// Exercise 6
+// Bonus exercise
 // TODO: Replace the table UI with MUI components:
 // - <table>            → <Table> + <TableHead> + <TableBody> + <TableRow> + <TableCell>
 // - + / − <button>s     → <IconButton> with <AddIcon> / <RemoveIcon>

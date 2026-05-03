@@ -11,6 +11,13 @@ export default function About() {
         <li>Open source contributors</li>
         <li>Lovers of clean, simple code</li>
       </ul>
+
+      <nav className="about__subnav">
+        <a href="#" className="about__sublink">Our Team</a>
+        <a href="#" className="about__sublink">Our Mission</a>
+      </nav>
+
+      {/* Render the active nested page here */}
     </main>
   );
 }
