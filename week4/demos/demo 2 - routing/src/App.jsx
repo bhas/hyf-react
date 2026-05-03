@@ -18,10 +18,10 @@ export default function App() {
     <div className="app">
       <Navbar cartCount={ticketCount} />
       <Home onAddTicket={addTicket} />
-      {/* <Movies /> */}
-      {/* <NowShowing onAddTicket={addTicket} /> */}
-      {/* <ComingSoon /> */}
-      {/* <Tickets /> */}
+      <Movies />
+      <NowShowing onAddTicket={addTicket} />
+      <ComingSoon />
+      <Tickets />
     </div>
   );
 }

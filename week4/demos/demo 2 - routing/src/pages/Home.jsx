@@ -1,14 +1,7 @@
 export default function Home({ onAddTicket }) {
   return (
     <>
-      <div className="hero">
-        <p className="hero__title">Cine<span>Max</span></p>
-        <p className="hero__subtitle">Your premier destination for movies, screenings &amp; more</p>
-        <div className="hero__actions">
-          <a href="#" className="btn btn--primary">Now Showing</a>
-          <a href="#" className="btn btn--outline">Coming Soon</a>
-        </div>
-      </div>
+      
       <div className="page">
         <p className="page__eyebrow">This week</p>
         <h2 className="page__title">Featured Films</h2>
