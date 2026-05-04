@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { TextField, Button, Alert, Stack } from '@mui/material';
 
 // Exercise 1
-// TODO: Replace the form elements with MUI components:
+// MUI components used:
 // - <input>        → <TextField>
 // - <textarea>     → <TextField multiline>
 // - <button>       → <Button variant="contained">
@@ -19,23 +20,16 @@ export default function ContactForm() {
       <hr />
 
       {submitted && (
-        <div className="feedback-success">✅ Thanks! We’ll be in touch soon.</div>
+        <Alert severity="success" sx={{ mb: 2 }}>Thanks! We'll be in touch soon.</Alert>
       )}
 
       <form onSubmit={e => { e.preventDefault(); setSubmitted(true); }}>
-        <div className="field">
-          <label htmlFor="name">Name</label>
-          <input id="name" type="text" placeholder="Your name" />
-        </div>
-        <div className="field">
-          <label htmlFor="email">Email</label>
-          <input id="email" type="email" placeholder="you@example.com" />
-        </div>
-        <div className="field">
-          <label htmlFor="message">Message</label>
-          <textarea id="message" rows={4} placeholder="How can we help?" />
-        </div>
-        <button type="submit">Send message</button>
+        <Stack spacing={2}>
+          <TextField id="name" label="Name" placeholder="Your name" fullWidth />
+          <TextField id="email" label="Email" type="email" placeholder="you@example.com" fullWidth />
+          <TextField id="message" label="Message" placeholder="How can we help?" multiline rows={4} fullWidth />
+          <Button type="submit" variant="contained">Send message</Button>
+        </Stack>
       </form>
     </div>
   );
