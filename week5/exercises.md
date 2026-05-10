@@ -58,3 +58,10 @@ In this exercise you will practice both client-side and server-side data fetchin
 - Compare the two approaches: when does each one make sense?
 
 > Reference: [Server-side rendering in Next.js](https://nextjs.org/docs/app/getting-started/fetching-data#with-the-fetch-api)
+
+## Make a dynamic Sub-page `/server/{date}`
+
+- Create a new page at `app/server/[date]/page.js` and use the same page as you had for the previous exercise. it should be accessible on `{url}/server/2025-12-24` and `{url}/server/2026-03-01`
+- add a header containing the given date from the URL
+- Adjust the page to display the image and captions for the given date
+- Bonus: add error handling when providing future dates or invalid dates.
