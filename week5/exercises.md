@@ -19,8 +19,8 @@ Next.js uses a file-based router. Creating a file inside `app/` automatically cr
 
 # Exercise 3 — Style your pages
 
-1. Apply **CSS Modules** to give each sub-page a unique look (different background colour, font, etc.)
-2. Add any shared base styles (resets, fonts) in the global stylesheet
+1. Apply **CSS Modules** to give each sub-page a unique look (different background color, etc.)
+2. Add any shared base styles in the global stylesheet
 3. Extend your pages with a few more elements — a footer, a caption under each image, etc.
 
 # Exercise 4 — Deploy to Vercel
@@ -39,7 +39,7 @@ In this exercise you will practice both client-side and server-side data fetchin
 
 - Register for a free API key at [api.nasa.gov](https://api.nasa.gov)
 - Use the [Mars Rover Photos endpoint](https://api.nasa.gov/#MarsPhotos) to fetch photos from **May 1st, 2025**
-- Test the request in your browser or a tool like Postman before writing any code
+- Test the request in your browser before writing any code
 
 ## Sub-page `/client` — client-side rendering
 
@@ -57,4 +57,4 @@ In this exercise you will practice both client-side and server-side data fetchin
 - Display the same photos and captions as in the client version
 - Compare the two approaches: when does each one make sense?
 
-
+> Reference: [Server-side rendering in Next.js](https://nextjs.org/docs/app/getting-started/fetching-data#with-the-fetch-api)
