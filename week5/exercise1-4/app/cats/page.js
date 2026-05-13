@@ -15,12 +15,12 @@ export default function CatsPage() {
         <p className={styles.intro}>Here are some adorable cats for you!</p>
         <div className={styles.grid}>
           {cats.map((cat, i) => (
-            <figure key={i} className={styles.card}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+            <div key={i} className={styles.card}>
               <img src={cat.src} alt={cat.alt} className={styles.image} />
-              <figcaption className={styles.caption}>{cat.alt}</figcaption>
-            </figure>
+              <p className={styles.caption}>{cat.alt}</p>
+            </div>
           ))}
+
         </div>
       </main>
       <footer className={styles.footer}>

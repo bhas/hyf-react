@@ -15,11 +15,10 @@ export default function DogsPage() {
         <p className={styles.intro}>Check out these good boys and girls!</p>
         <div className={styles.grid}>
           {dogs.map((dog, i) => (
-            <figure key={i} className={styles.card}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+            <div key={i} className={styles.card}>
               <img src={dog.src} alt={dog.alt} className={styles.image} />
-              <figcaption className={styles.caption}>{dog.alt}</figcaption>
-            </figure>
+              <p className={styles.caption}>{dog.alt}</p>
+            </div>
           ))}
         </div>
       </main>
