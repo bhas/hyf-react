@@ -1,4 +1,12 @@
 import { useState } from 'react';
+import {
+  Table, TableHead, TableBody, TableRow, TableCell,
+  IconButton, Badge,
+} from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
+import DeleteIcon from '@mui/icons-material/Delete';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const initialCart = [
   { id: 1, emoji: '🪴', name: 'Ceramic Planter',  price: 34.00 },
@@ -38,40 +46,44 @@ export default function CartItems() {
       </p>
       <hr />
 
-      <p>🛒 <strong>{cart.length}</strong> item{cart.length !== 1 ? 's' : ''} in cart</p>
+      <Badge badgeContent={cart.length} color="primary" sx={{ mb: 2 }}>
+        <ShoppingCartIcon />
+      </Badge>
 
-      <table className="cart-table">
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Price</th>
-            <th>Qty</th>
-            <th>Subtotal</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
+      <Table size="small">
+        <TableHead>
+          <TableRow>
+            <TableCell>Item</TableCell>
+            <TableCell>Price</TableCell>
+            <TableCell>Qty</TableCell>
+            <TableCell>Subtotal</TableCell>
+            <TableCell />
+          </TableRow>
+        </TableHead>
+        <TableBody>
           {cart.map(item => (
-            <tr key={item.id}>
-              <td>{item.emoji} {item.name}</td>
-              <td>€{item.price.toFixed(2)}</td>
-              <td>
-                <button onClick={() => updateQty(item.id, -1)}>−</button>
-                {' '}{item.qty}{' '}
-                <button onClick={() => updateQty(item.id, +1)}>+</button>
-              </td>
-              <td>€{(item.price * item.qty).toFixed(2)}</td>
-              <td><button onClick={() => remove(item.id)}>✕</button></td>
-            </tr>
+            <TableRow key={item.id}>
+              <TableCell>{item.emoji} {item.name}</TableCell>
+              <TableCell>€{item.price.toFixed(2)}</TableCell>
+              <TableCell>
+                <IconButton size="small" onClick={() => updateQty(item.id, -1)}><RemoveIcon fontSize="small" /></IconButton>
+                {item.qty}
+                <IconButton size="small" onClick={() => updateQty(item.id, +1)}><AddIcon fontSize="small" /></IconButton>
+              </TableCell>
+              <TableCell>€{(item.price * item.qty).toFixed(2)}</TableCell>
+              <TableCell>
+                <IconButton size="small" onClick={() => remove(item.id)}><DeleteIcon fontSize="small" /></IconButton>
+              </TableCell>
+            </TableRow>
           ))}
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colSpan={3}><strong>Total</strong></td>
-            <td colSpan={2}><strong>€{total.toFixed(2)}</strong></td>
-          </tr>
-        </tfoot>
-      </table>
+        </TableBody>
+        <TableBody>
+          <TableRow>
+            <TableCell colSpan={3}><strong>Total</strong></TableCell>
+            <TableCell colSpan={2}><strong>€{total.toFixed(2)}</strong></TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
     </div>
   );
 }

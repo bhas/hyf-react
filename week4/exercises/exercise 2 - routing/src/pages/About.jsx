@@ -1,3 +1,11 @@
+import { NavLink, Outlet } from 'react-router-dom';
+
+function subNavClass({ isActive }) {
+  // isActive is a boolean from NavLink that tells us if the link is active.
+  // we use it to conditionally apply the 'active' class to the link, which will style it differently when it's active.
+  return isActive ? 'about__sublink active' : 'about__sublink';
+}
+
 export default function About() {
   return (
     <main className="page">
@@ -13,11 +21,17 @@ export default function About() {
       </ul>
 
       <nav className="about__subnav">
-        <a href="#" className="about__sublink">Our Team</a>
-        <a href="#" className="about__sublink">Our Mission</a>
+        <NavLink to="/about/team" className={subNavClass}>
+          Our Team
+        </NavLink>
+        <NavLink to="/about/mission" className={subNavClass}>
+          Our Mission
+        </NavLink>
       </nav>
 
-      {/* Render the active nested page here */}
+      {/* The Outlet is where the nested routes will be rendered. 
+      So when we navigate to /about/team, the Team component will be rendered here, and when we navigate to /about/mission, the Mission component will be rendered here. */}
+      <Outlet />
     </main>
   );
 }
